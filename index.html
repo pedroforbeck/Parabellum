@@ -3,45 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME // SELECIONE O PLAYER</title>
+    <title>HOME // SELECIONE O PLAYER — Nosso Universo</title>
+    <meta name="description" content="Selecione seu player e entre no universo. Um projeto de faculdade com estilo Scott Pilgrim.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="cursor-trail-container"></div>
-<div id="click-flash"></div>
-
 <nav>
-    <div class="nav-logo">// SELECIONE O PLAYER</div>
+    <div class="nav-logo">// <span>NOSSO UNIVERSO</span></div>
     <ul class="nav-links">
-        <li><a href="#player-select">Players</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pedro.html" class="p1-link">Pedro</a></li>
+        <li><a href="pedro-showcase.html" class="p1-link">Showcase P1</a></li>
+        <li><a href="sofia.html" class="p2-link">Sofia</a></li>
+        <li><a href="sofia-showcase.html" class="p2-link">Showcase P2</a></li>
     </ul>
 </nav>
 
 <section id="hero">
-    <div id="hero-sticky">
-        <div id="hero-grid"></div>
-        <div id="speed-lines"></div>
-        <p class="hero-subtitle">TORNEIO MUNDIAL // 2026</p>
-        <h1 id="hero-title">
-            NOSSO<br>
-            <span class="hero-title-line2">UNIVERSO</span>
-        </h1>
-        <p class="hero-scroll-hint">&#9660; &nbsp; scroll  &nbsp; &#9660;</p>
-    </div>
+    <p class="hero-subtitle">TORNEIO MUNDIAL // 2026</p>
+    <h1 id="hero-title">
+        NOSSO<br>
+        <span class="hero-title-line2">UNIVERSO</span>
+    </h1>
+    <p class="hero-scroll-hint">&#9660; &nbsp; scroll &nbsp; &#9660;</p>
 </section>
 
-ection id="player-select">
-<div id="player-sticky">
+<section id="player-select">
     <p class="section-label">&#8212; INSIRA UMA MOEDA PARA CONTINUAR &#8212;</p>
     <div class="players-grid">
 
-        <div class="player-card" id="p1-card">
+        <!-- PLAYER 1 — PEDRO -->
+        <a href="pedro.html" class="player-card" id="p1-card">
             <div class="hp-bar-wrap">
                 <div class="hp-label">
                     <span class="p1-color">P1</span>
@@ -51,24 +48,19 @@ ection id="player-select">
             </div>
             <div class="sprite-wrapper">
                 <div class="sprite" id="sprite-p1">
-                    <div class="sprite-label-inside">[ O<br>SPRITE<br>VAI AQUI ]</div>
+                    <img src="defaultsprite.png" alt="Pedro — Player 1 sprite em estilo pixel art">
                 </div>
             </div>
-            <p class="player-name p1-color">PLAYER 1</p>
-            <p class="player-role">dev</p>
-            <p class="click-hint">aperte para entrar &#8629;</p>
-        </div>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-        <div class="vs-badge" id="vs">VS</div>
+            <p class="player-name p1-color">PEDRO</p>
+            <p class="player-role">dev // player 1</p>
+            <p class="click-hint">clique para entrar &#8629;</p>
+        </a>
 
-        <div class="player-card" id="p2-card">
+        <!-- VS BADGE -->
+        <div class="vs-badge">VS</div>
+
+        <!-- PLAYER 2 — SOFIA -->
+        <a href="sofia.html" class="player-card" id="p2-card">
             <div class="hp-bar-wrap">
                 <div class="hp-label">
                     <span class="p2-color">P2</span>
@@ -78,16 +70,15 @@ ection id="player-select">
             </div>
             <div class="sprite-wrapper">
                 <div class="sprite" id="sprite-p2">
-                    <div class="sprite-label-inside">[ SOFIA<br>SPRITE<br>AQ ]</div>
+                    <img src="sofia-solo.png" alt="Sofia — Player 2 sprite em estilo pixel art">
                 </div>
             </div>
-            <p class="player-name p2-color">PLAYER 2</p>
-            <p class="player-role">dev</p>
+            <p class="player-name p2-color">SOFIA</p>
+            <p class="player-role">dev // player 2</p>
             <p class="click-hint">clique para entrar &#8629;</p>
-        </div>
+        </a>
 
     </div>
-</div>
 </section>
 
 <section id="about">
@@ -115,10 +106,12 @@ ection id="player-select">
 
 <footer>
     <div>&#169; 2026 // NOSSO UNIVERSO</div>
+    <div>
+        <a href="index.html">home</a> &nbsp;/&nbsp;
+        <a href="pedro.html">pedro</a> &nbsp;/&nbsp;
+        <a href="sofia.html">sofia</a>
+    </div>
 </footer>
 
-<script src="script.js"></script>
-</body>
-</html>
 </body>
 </html>
