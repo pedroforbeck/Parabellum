@@ -106,18 +106,18 @@
   align-items: flex-end;
 }
 
-/* cards que vao os sprites !!*/
+
 .player-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   will-change: transform, opacity;
-  opacity: 0;            /* JS drives */
+  opacity: 0;
   transform-origin: center bottom;
 }
 
-/* barra vida */
+
 .hp-bar-wrap {
   width: 140px;
   display: flex;
@@ -158,7 +158,7 @@
   background: rgba(255,255,255,.4);
 }
 
-/* sprite box */
+
 .sprite-wrapper {
   position: relative;
   width: 140px; height: 200px;
@@ -172,7 +172,7 @@
   overflow: hidden;
   border: 3px solid;
   transition: transform .15s, box-shadow .15s;
-  /* checkerboard placeholder */
+
   background-image:
     linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
     linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
@@ -211,7 +211,7 @@
   background: rgba(10,10,10,.5);
 }
 
-/* player info */
+
 .player-name {
   font-family: var(--pixel);
   font-size: .55rem;
@@ -237,7 +237,7 @@
   animation: blink 1.8s step-end infinite;
 }
 
-/* VS badge */
+
 .vs-badge {
   font-family: var(--pixel);
   font-size: 2.5rem;
@@ -254,9 +254,6 @@
   50%     { transform: scale(1.08) rotate(5deg); }
 }
 
-/* ═══════════════════════════════════════════════
-   ABOUT
-═══════════════════════════════════════════════ */
 #about {
   padding: 8rem 3rem;
   max-width: 900px;
@@ -311,9 +308,7 @@
   letter-spacing: .15em;
 }
 
-/* ═══════════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════════ */
+
 footer {
   border-top: 1px solid #1e1e1e;
   padding: 3rem;
@@ -327,9 +322,7 @@ footer {
   text-transform: uppercase;
 }
 
-/* ═══════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════ */
+
 @media (max-width: 640px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { gap: 1.5rem; }
