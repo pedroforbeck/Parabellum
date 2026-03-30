@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════════════════════
+/* ahn... bagaça gigante aqui véi qq eu fiz kkk 
    SOFIA'S WORLD — Player 2 Page
    Blue/pink theme with comic-panel layout
-═══════════════════════════════════════════════════════════════ */
+*/
 
-/* ── PAGE HERO ── */
+/* ahn... o hero da pag q eu copiei acho rs */
 .world-hero {
   min-height: 100vh;
   display: flex;
@@ -14,7 +14,7 @@
   padding: 6rem 2rem;
 }
 
-/* Halftone dots background — blue tint */
+/* uns pontinho azul se pa fica daora d bg */
 .world-hero::before {
   content: '';
   position: absolute;
@@ -25,7 +25,7 @@
   pointer-events: none;
 }
 
-/* Diagonal accent lines */
+/* aq umas linha torta p da um tchan tlgd */
 .world-hero::after {
   content: '';
   position: absolute;
@@ -103,7 +103,7 @@
   max-width: 400px;
 }
 
-/* ── CHARACTER STATS PANEL ── */
+/* aqui tem os status da boneca kkk slc */
 .stats-section {
   padding: 6rem 2rem;
   max-width: 1000px;
@@ -230,7 +230,7 @@
   text-align: right;
 }
 
-/* ── COMIC PANELS SECTION ── */
+/* ah os quadrinho la tpo gibi vei */
 .story-section {
   padding: 4rem 2rem 6rem;
   max-width: 1000px;
@@ -266,7 +266,7 @@
   animation: slideUp 0.7s 2.1s var(--ease-out-expo) both;
 }
 
-/* Sofia-specific panel border */
+/* bordinha so pra ela kkk excluisvo da casa */
 .comic-panel {
   border-color: var(--blue);
 }
@@ -290,7 +290,7 @@
   margin-top: 1.5rem;
 }
 
-/* Sofia bubble uses pink accent */
+/* bagulho de fala rosa pra da aquele charme slc */
 .speech-bubble {
   border-color: var(--blue);
 }
@@ -299,7 +299,7 @@
   border-top-color: var(--blue);
 }
 
-/* ── SHOWCASE CTA ── */
+/* chama pro showcase tlgd */
 .showcase-cta {
   text-align: center;
   padding: 4rem 2rem 6rem;
@@ -315,9 +315,9 @@
   margin-bottom: 1.5rem;
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* ufa... cabou isso aqui kkk 
    RESPONSIVE
-═══════════════════════════════════════════════════════════════ */
+*/
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column-reverse;

@@ -1,9 +1,8 @@
-/* ═══════════════════════════════════════════════════════════════
-   PEDRO'S WORLD — Player 1 Page
-   Yellow/warm theme with comic-panel layout
-═══════════════════════════════════════════════════════════════ */
+/*
 
-/* ── PAGE HERO ── */
+*/
+
+/* .. header da page*/
 .world-hero {
   min-height: 100vh;
   display: flex;
@@ -14,7 +13,7 @@
   padding: 6rem 2rem;
 }
 
-/* Halftone dots background */
+/* fundo c uns pontinho p*/
 .world-hero::before {
   content: '';
   position: absolute;
@@ -25,7 +24,7 @@
   pointer-events: none;
 }
 
-/* Diagonal speed lines */
+/* e umas linha  */
 .world-hero::after {
   content: '';
   position: absolute;
@@ -103,7 +102,7 @@
   max-width: 400px;
 }
 
-/* ── CHARACTER STATS PANEL ── */
+/* status do painel kkk  */
 .stats-section {
   padding: 6rem 2rem;
   max-width: 1000px;
@@ -118,7 +117,7 @@
   animation: fadeInUp 0.8s 0.8s var(--ease-out-expo) both;
 }
 
-/* Corner decorations */
+/* as borda ti */
 .stats-panel::before,
 .stats-panel::after {
   content: '+';
@@ -217,7 +216,7 @@
   background: rgba(255, 255, 255, 0.35);
 }
 
-/* Staggered stat bar animations */
+/* s */
 .stat-row:nth-child(1) .stat-bar-fill { animation: statFill85 1.2s 1.2s var(--ease-out-expo) both; }
 .stat-row:nth-child(2) .stat-bar-fill { animation: statFill70 1.2s 1.4s var(--ease-out-expo) both; }
 .stat-row:nth-child(3) .stat-bar-fill { animation: statFill90 1.2s 1.6s var(--ease-out-expo) both; }
@@ -232,7 +231,7 @@
   text-align: right;
 }
 
-/* ── COMIC PANELS SECTION ── */
+/* quadrinhos q eu roubei a ideia */
 .story-section {
   padding: 4rem 2rem 6rem;
   max-width: 1000px;
@@ -249,7 +248,7 @@
   gap: 1.5rem;
 }
 
-/* 3-panel layout */
+/* 3 quadrinho igual*/
 .comic-grid--three {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -283,12 +282,12 @@
   line-height: 1.8;
 }
 
-/* Speech bubble in panels */
+/* bagulho de fala */
 .panel-speech {
   margin-top: 1.5rem;
 }
 
-/* ── SHOWCASE LINK ── */
+/* botão p ver */
 .showcase-cta {
   text-align: center;
   padding: 4rem 2rem 6rem;
@@ -304,9 +303,8 @@
   margin-bottom: 1.5rem;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════════════════ */
+/*
+*/
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;

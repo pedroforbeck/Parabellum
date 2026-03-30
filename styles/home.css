@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════════════════════
+/* ahn... css da home principal 
    HOME PAGE — PLAYER SELECT
    index.html specific styles
-═══════════════════════════════════════════════════════════════ */
+*/
 
-/* ── HERO ── */
+/* parte de cima zona principal slc */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -15,7 +15,7 @@
   padding-top: 4rem;
 }
 
-/* Pixel grid background */
+/* fundo de pixel daora */
 #hero::before {
   content: '';
   position: absolute;
@@ -27,7 +27,7 @@
   pointer-events: none;
 }
 
-/* Speed lines */
+/* linha rapida tipo flash */
 #hero::after {
   content: '';
   position: absolute;
@@ -312,7 +312,7 @@
              vsPulse 2s 3.1s ease-in-out infinite;
 }
 
-/* ── ABOUT SECTION ── */
+/* ── Asobreere── */
 #about {
   padding: 8rem 3rem;
   max-width: 900px;
@@ -363,9 +363,9 @@
   letter-spacing: 0.15em;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════════════════ */
+/* m
+   REsponsividade
+*/
 @media (max-width: 768px) {
   #hero-title {
     font-size: clamp(3rem, 11vw, 6rem);

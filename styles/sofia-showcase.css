@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════════════════════
-   SOFIA'S SHOWCASE — Sprite Gallery
-   Blue/pink themed sprite showcase
-═══════════════════════════════════════════════════════════════ */
+/* showcase da sofia rsrsrs
+   SOFIA'S WORLD — Showcase Page
+   Sprite gallery with fun interactions
+*/
 
-/* ── PAGE HEADER ── */
+/* aqui fica o titulo  */
 .showcase-hero {
   min-height: 50vh;
   display: flex;
@@ -36,7 +36,7 @@
   animation: fadeInUp 0.7s 0.6s var(--ease-out-expo) both;
 }
 
-/* ── SPRITE GALLERY ── */
+/* */
 .sprite-gallery {
   padding: 2rem 2rem 6rem;
   max-width: 1100px;
@@ -57,7 +57,7 @@
   justify-items: center;
 }
 
-/* ── SPRITE CARDS ── */
+/* ─spritee */
 .sprite-card {
   width: 100%;
   max-width: 320px;
@@ -89,7 +89,7 @@
     0 0 40px var(--blue-glow);
 }
 
-/* Corner decorations */
+/* ddecorar */
 .sprite-card::before,
 .sprite-card::after {
   content: '✦';
@@ -216,8 +216,7 @@
   aspect-ratio: 16/10;
 }
 
-/* ── FUN HOVER EFFECTS ── */
-/* Comic pop text on hover */
+
 .sprite-card .comic-pop {
   position: absolute;
   top: 15px;
@@ -237,9 +236,8 @@
   transform: translateX(-50%) scale(1);
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════════════════ */
+
+
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: 1fr;
