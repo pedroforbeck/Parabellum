@@ -15,6 +15,10 @@
 
 <nav>
     <div class="nav-logo">// <span>PARABELLUM</span></div>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">
+        <span class="hamburger"></span>
+    </label>
     <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="pages/pedro.html" class="p1-link">Pedro</a></li>
@@ -38,7 +42,7 @@
     <div class="players-grid">
 
         <!-- o pedro -->
-        <a href="pages/pedro.html" class="player-card" id="p1-card">
+        <a href="#modal-p1" class="player-card" id="p1-card">
             <div class="hp-bar-wrap">
                 <div class="hp-label">
                     <span class="p1-color">P1</span>
@@ -59,7 +63,7 @@
         <!-- vs kkk-->
         <div class="vs-badge">VS</div>
 
-        <a href="pages/sofia.html" class="player-card" id="p2-card">
+        <a href="#modal-p2" class="player-card" id="p2-card">
             <div class="hp-bar-wrap">
                 <div class="hp-label">
                     <span class="p2-color">P2</span>
@@ -111,6 +115,37 @@
         <a href="pages/sofia.html">sofia</a>
     </div>
 </footer>
+
+<!-- Modaiss (Forms sem JS) -->
+<div id="modal-p1" class="modal">
+    <div class="modal-content">
+        <h2 class="modal-title p1-color">PREPARADO?</h2>
+        <p class="modal-desc">Você vai entrar no mundo de Pedro.</p>
+        <form action="pages/pedro.html" method="GET" class="styled-form">
+            <label for="p1-name" class="form-label">Insira seu nome:</label>
+            <input type="text" id="p1-name" name="player" class="pixel-input" placeholder="Player 1" required>
+            <div class="modal-actions">
+                <a href="#" class="pixel-btn pixel-btn--red">VOLTAR</a>
+                <button type="submit" class="pixel-btn pixel-btn--yellow">START</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="modal-p2" class="modal">
+    <div class="modal-content">
+        <h2 class="modal-title p2-color">PREPARADA?</h2>
+        <p class="modal-desc">Você vai entrar no mundo de Sofia.</p>
+        <form action="pages/sofia.html" method="GET" class="styled-form">
+            <label for="p2-name" class="form-label">Insira seu nome:</label>
+            <input type="text" id="p2-name" name="player" class="pixel-input" placeholder="Player 2" required>
+            <div class="modal-actions">
+                <a href="#" class="pixel-btn pixel-btn--red">VOLTAR</a>
+                <button type="submit" class="pixel-btn pixel-btn--blue">START</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
