@@ -1,0 +1,135 @@
+/*
+*/
+
+/* cabecalho da pag q d */
+.showcase-hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.showcase-hero h1 {
+  font-family: var(--pixel);
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow:
+    3px 3px 0 var(--yellow),
+    6px 6px 0 rgba(245, 230, 66, 0.15);
+  animation: heroZoomIn 1s 0.2s var(--ease-out-expo) both;
+  margin-bottom: 1rem;
+}
+
+.showcase-hero .showcase-sub {
+  font-family: var(--pixel);
+  font-size: 0.4rem;
+  color: var(--yellow);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: fadeInUp 0.7s 0.6s var(--ease-out-expo) both;
+}
+
+/*  bonequinho */
+.sprite-gallery {
+  padding: 2rem 2rem 6rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sprite-gallery .section-label {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.7s 0.8s var(--ease-out-expo) both;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* carta */
+.sprite-card {
+  width: 100%;
+  max-width: 320px;
+  border: 4px solid var(--yellow);
+  background: var(--dark);
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s var(--ease-out-back), box-shadow 0.3s;
+}
+
+.sprite-card:nth-child(1) { animation: pixelBounce 0.8s 1s var(--ease-out-back) both; }
+.sprite-card:nth-child(2) { animation: pixelBounce 0.8s 1.2s var(--ease-out-back) both; }
+
+.sprite-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow:
+    8px 8px 0 var(--yellow),
+    0 0 40px var(--yellow-glow);
+}
+
+/*  */
+.sprite-card::before,
+.sprite-card::after {
+  content: '+';
+  position: absolute;
+  font-family: var(--pixel);
+  font-size: 0.4rem;
+  color: var(--yellow);
+  opacity: 0.5;
+}
+.sprite-card::before { top: 4px; left: 6px; }
+.sprite-card::after { bottom: 4px; right: 6px; }
+
+.sprite-card-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border: 2px solid var(--gray-light);
+  background: var(--dark2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.sprite-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.sprite-card:hover .sprite-card-img img {
+  animation: floatY 2s ease-in-out infinite;
+}
+
+.sprite-card-name {
+  font-family: var(--pixel);
+  font-size: 0.5rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.sprite-card-desc {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--white-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,521 @@
+/* ahn... css da home principal 
+   HOME PAGE — PLAYER SELECT
+   index.html specific styles
+*/
+
+/* parte de cima zona principal slc */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 4rem;
+}
+
+/* fundo de pixel daora */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(240, 236, 224, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240, 236, 224, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* linha rapida tipo flash */
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    transparent 3.5deg,
+    rgba(245, 230, 66, 0.5) 3.5deg,
+    rgba(245, 230, 66, 0.5) 4deg
+  );
+  pointer-events: none;
+  animation: fadeIn 2s 1s both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.04; }
+}
+
+.hero-subtitle {
+  font-family: var(--pixel);
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  color: var(--yellow);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s 0.3s var(--ease-out-expo) both;
+  position: relative;
+  z-index: 2;
+}
+
+#hero-title {
+  font-family: var(--pixel);
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+  text-shadow:
+    6px 6px 0 var(--red),
+    12px 12px 0 var(--red-glow),
+    -3px -3px 0 rgba(255, 255, 255, 0.04);
+  letter-spacing: -0.02em;
+  animation: heroZoomIn 1.2s 0.1s var(--ease-out-expo) both;
+}
+
+.hero-title-line2 {
+  display: block;
+  color: var(--yellow);
+  text-shadow:
+    4px 4px 0 var(--black),
+    6px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  font-family: var(--pixel);
+  font-size: 0.4rem;
+  letter-spacing: 0.2em;
+  color: var(--white-dim);
+  text-transform: uppercase;
+  animation: fadeInUp 0.6s 1.2s var(--ease-out-expo) both,
+             blink 1.4s 2s step-end infinite;
+  z-index: 2;
+}
+
+/* ── PLAYER SELECT SECTION ── */
+#player-select {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  gap: 3rem;
+  position: relative;
+}
+
+#player-select .section-label {
+  animation: fadeInUp 0.7s 1.5s var(--ease-out-expo) both;
+}
+
+.players-grid {
+  display: flex;
+  gap: clamp(3rem, 10vw, 8rem);
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── PLAYER CARDS ── */
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  transform-origin: center bottom;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.player-card:nth-child(1) {
+  animation: bounceInLeft 1s 1.8s var(--ease-out-back) both;
+}
+
+.player-card:nth-child(3) {
+  animation: bounceInRight 1s 2.1s var(--ease-out-back) both;
+}
+
+/* HP Bar */
+.hp-bar-wrap {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hp-label {
+  font-family: var(--pixel);
+  font-size: 0.38rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hp-track {
+  height: 12px;
+  background: var(--dark2);
+  border: 2px solid var(--gray-light);
+  overflow: hidden;
+  position: relative;
+}
+
+.hp-fill {
+  height: 100%;
+  width: 0%;
+  position: relative;
+  animation: hpFill 1.5s 2.8s var(--ease-out-expo) forwards;
+}
+
+/* HP fill shimmer effect */
+.hp-fill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: hpShimmer 2s 4s linear infinite;
+}
+
+.hp-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#p1-card .hp-fill { background: var(--yellow); }
+#p2-card .hp-fill { background: var(--blue); }
+
+/* Sprite Wrapper */
+.sprite-wrapper {
+  position: relative;
+  width: 160px;
+  height: 220px;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid;
+  transition: transform 0.2s var(--ease-out-back), box-shadow 0.2s;
+  background-color: var(--dark2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprite img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#sprite-p1 { border-color: var(--yellow); }
+#sprite-p2 { border-color: var(--blue); }
+
+/* Hover effects on entire card */
+.player-card:hover .sprite {
+  transform: scale(1.08) translateY(-6px);
+}
+
+#p1-card:hover .sprite {
+  box-shadow: 0 0 0 2px var(--yellow), 8px 8px 0 var(--yellow), 0 0 30px var(--yellow-glow);
+}
+
+#p2-card:hover .sprite {
+  box-shadow: 0 0 0 2px var(--blue), 8px 8px 0 var(--blue), 0 0 30px var(--blue-glow);
+}
+
+/* Sprite idle float */
+.player-card:hover .sprite img {
+  animation: floatY 2s ease-in-out infinite;
+}
+
+.sprite-label-inside {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--pixel);
+  font-size: 0.38rem;
+  color: var(--white-dim);
+  text-align: center;
+  line-height: 2;
+  padding: 0.5rem;
+  background: rgba(10, 10, 10, 0.5);
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Player Info */
+.player-name {
+  font-family: var(--pixel);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  transition: text-shadow 0.3s;
+}
+
+.player-card:hover .player-name {
+  text-shadow: 0 0 15px currentColor;
+}
+
+.player-role {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--white-dim);
+  text-align: center;
+}
+
+.click-hint {
+  font-family: var(--pixel);
+  font-size: 0.3rem;
+  letter-spacing: 0.15em;
+  color: var(--white-faint);
+  text-transform: uppercase;
+  animation: blink 1.6s step-end infinite;
+}
+
+/* ── VS BADGE ── */
+.vs-badge {
+  font-family: var(--pixel);
+  font-size: 2.8rem;
+  color: var(--red);
+  text-shadow: 
+    3px 3px 0 var(--black), 
+    -1px -1px 0 rgba(255, 255, 255, 0.1),
+    0 0 30px var(--red-glow);
+  align-self: center;
+  animation: scaleIn 0.6s 2.5s var(--ease-out-back) both,
+             vsPulse 2s 3.1s ease-in-out infinite;
+}
+
+/* ── Asobreere── */
+#about {
+  padding: 8rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  animation: fadeInUp 0.8s 3.5s var(--ease-out-expo) both;
+}
+
+.about-tag {
+  font-family: var(--pixel);
+  font-size: 0.45rem;
+  color: var(--red);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--white-dim);
+}
+
+.about-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-stat {
+  font-family: var(--pixel);
+  font-size: 2.5rem;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.about-stat-label {
+  font-size: 0.75rem;
+  color: var(--white-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ── MODALS (FORMULÁRIOS) ── */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-out-expo);
+  padding: 1rem;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: var(--dark);
+  border: 4px solid var(--gray-light);
+  padding: 3rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.modal:target .modal-content {
+  transform: translateY(0);
+}
+
+#modal-p1 .modal-content { border-color: var(--yellow); box-shadow: 0 0 40px rgba(245, 230, 66, 0.1); }
+#modal-p2 .modal-content { border-color: var(--blue); box-shadow: 0 0 40px rgba(42, 109, 232, 0.1); }
+
+.modal-title {
+  font-family: var(--pixel);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 0 var(--black);
+}
+
+.modal-desc {
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  margin-bottom: 2rem;
+}
+
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.form-label {
+  font-family: var(--pixel);
+  font-size: 0.4rem;
+  letter-spacing: 0.15em;
+  color: var(--white-dim);
+  text-transform: uppercase;
+}
+
+.pixel-input {
+  background: var(--dark2);
+  border: 3px solid var(--gray);
+  padding: 1rem;
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.pixel-input:focus {
+  border-color: var(--white);
+  box-shadow: 0 0 10px rgba(240, 236, 224, 0.2);
+}
+
+#modal-p1 .pixel-input:focus { border-color: var(--yellow); box-shadow: 0 0 15px var(--yellow-glow); }
+#modal-p2 .pixel-input:focus { border-color: var(--blue); box-shadow: 0 0 15px var(--blue-glow); }
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.modal-actions button,
+.modal-actions a {
+  flex: 1;
+  text-align: center;
+}
+
+/* m
+   REsponsividade
+*/
+@media (max-width: 768px) {
+  #hero-title {
+    font-size: clamp(3rem, 11vw, 6rem);
+  }
+
+  .players-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .vs-badge {
+    order: -1;
+    font-size: 2rem;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  #player-select {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-subtitle {
+    font-size: 0.4rem;
+  }
+  
+  #hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .modal-content {
+    padding: 2rem 1.5rem;
+    max-width: 90vw;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .sprite-wrapper {
+    width: 130px;
+    height: 180px;
+  }
+  
+  .hp-bar-wrap {
+    width: 130px;
+  }
+}
