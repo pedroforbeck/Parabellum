@@ -15,7 +15,7 @@
 
 .showcase-hero h1 {
   font-family: var(--pixel);
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-size: clamp(1rem, 6vw, 3.5rem);
   text-transform: uppercase;
   color: var(--white);
   text-shadow:
@@ -23,6 +23,7 @@
     6px 6px 0 rgba(245, 230, 66, 0.15);
   animation: heroZoomIn 1s 0.2s var(--ease-out-expo) both;
   margin-bottom: 1rem;
+  word-break: break-word;
 }
 
 .showcase-hero .showcase-sub {
@@ -67,6 +68,7 @@
 
 .sprite-card:nth-child(1) { animation: pixelBounce 0.8s 1s var(--ease-out-back) both; }
 .sprite-card:nth-child(2) { animation: pixelBounce 0.8s 1.2s var(--ease-out-back) both; }
+.sprite-card:nth-child(3) { animation: pixelBounce 0.8s 1.4s var(--ease-out-back) both; }
 
 .sprite-card:hover {
   transform: translateY(-8px) rotate(-1deg);
@@ -105,10 +107,29 @@
   height: 100%;
   object-fit: contain;
   image-rendering: pixelated;
+  transform: scale(2.2);
 }
 
 .sprite-card:hover .sprite-card-img img {
-  animation: floatY 2s ease-in-out infinite;
+  animation: floatScale 2s ease-in-out infinite;
+}
+
+@keyframes floatScale {
+  0%, 100% { transform: translateY(0) scale(2.2); }
+  50% { transform: translateY(-8px) scale(2.2); }
+}
+
+.sprite-card:nth-child(2) .sprite-card-img img {
+  transform: scale(1.4);
+}
+
+.sprite-card:nth-child(2):hover .sprite-card-img img {
+  animation: floatScaleCar 2s ease-in-out infinite;
+}
+
+@keyframes floatScaleCar {
+  0%, 100% { transform: translateY(0) scale(1.4); }
+  50% { transform: translateY(-8px) scale(1.4); }
 }
 
 .sprite-card-name {
@@ -131,5 +152,11 @@
   .gallery-grid {
     grid-template-columns: 1fr;
     padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-hero h1 {
+    font-size: 1.2rem;
   }
 }

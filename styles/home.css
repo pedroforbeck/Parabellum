@@ -63,7 +63,7 @@
 
 #hero-title {
   font-family: var(--pixel);
-  font-size: clamp(4rem, 12vw, 10rem);
+  font-size: clamp(1.8rem, 8vw, 10rem);
   line-height: 1.1;
   text-align: center;
   text-transform: uppercase;
@@ -468,7 +468,7 @@
 */
 @media (max-width: 768px) {
   #hero-title {
-    font-size: clamp(3rem, 11vw, 6rem);
+    font-size: clamp(1.5rem, 8vw, 6rem);
   }
 
   .players-grid {
@@ -478,7 +478,6 @@
   }
 
   .vs-badge {
-    order: -1;
     font-size: 2rem;
   }
 
@@ -498,7 +497,7 @@
   }
   
   #hero-title {
-    font-size: 3.5rem;
+    font-size: 1.6rem;
   }
   
   .modal-content {
