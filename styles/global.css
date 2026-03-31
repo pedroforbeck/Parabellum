@@ -562,26 +562,94 @@ footer a:hover {
 }
 
 
+/* --- HAMBURGER MENU CSS --- */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 101;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background: var(--yellow);
+  transition: 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: var(--yellow);
+  transition: 0.3s;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
 @media (max-width: 768px) {
   nav {
-    padding: 1rem 1.2rem;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  
-  .nav-links {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 1rem 1.5rem;
   }
   
   .nav-logo {
-    font-size: 0.4rem;
+    z-index: 101;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    border-bottom: 2px solid var(--dark2);
+    /* Hidden state */
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s var(--ease-out-expo);
+  }
+
+  .menu-checkbox:checked ~ .nav-links {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Animate Hamburger to X */
+  .menu-checkbox:checked + .menu-icon .hamburger {
+    background: transparent;
+  }
+  .menu-checkbox:checked + .menu-icon .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .menu-checkbox:checked + .menu-icon .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
   }
 }
 
 @media (max-width: 480px) {
   .nav-links li a {
-    font-size: 0.3rem;
+    font-size: 0.45rem;
   }
 }
