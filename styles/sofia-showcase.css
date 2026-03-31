@@ -1,6 +1,5 @@
-/* showcase da sofia rsrsrs
+/* showcase da sofia
    SOFIA'S WORLD — Showcase Page
-   Sprite gallery with fun interactions
 */
 
 /* aqui fica o titulo  */
@@ -72,7 +71,7 @@
 .sprite-card:nth-child(2) { animation: pixelBounce 0.8s 1.3s var(--ease-out-back) both; }
 .sprite-card:nth-child(3) { animation: pixelBounce 0.8s 1.6s var(--ease-out-back) both; }
 
-/* Different hover tilts per card */
+/* tilts pra hover nos cards */
 .sprite-card:nth-child(1):hover {
   transform: translateY(-8px) rotate(-1.5deg);
 }
@@ -132,7 +131,7 @@
   animation: floatY 2s ease-in-out infinite;
 }
 
-/* Card badge */
+/* alguns frufru cards */
 .sprite-card-badge {
   position: absolute;
   top: -12px;
@@ -177,7 +176,7 @@
   line-height: 1.6;
 }
 
-/* ── FEATURED CARD (couple sprite — larger) ── */
+/* ── sofia namorado card ── */
 .sprite-card--featured {
   max-width: 380px;
   border-color: var(--pink);
@@ -197,7 +196,7 @@
   color: var(--pink);
 }
 
-/* ── PET CARD ── */
+/* ──sofia com o nene ── */
 .sprite-card--pet {
   border-color: var(--green);
 }
