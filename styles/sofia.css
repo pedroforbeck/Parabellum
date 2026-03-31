@@ -102,7 +102,7 @@ Tema rosa e azul da pag
   max-width: 400px;
 }
 
-/* aqui tem os status da boneca kkk slc */
+/* status player  */
 .stats-section {
   padding: 6rem 2rem;
   max-width: 1000px;
@@ -229,7 +229,7 @@ Tema rosa e azul da pag
   text-align: right;
 }
 
-/* ah os quadrinho la tpo gibi vei */
+/* quadrinhos  */
 .story-section {
   padding: 4rem 2rem 6rem;
   max-width: 1000px;
@@ -315,7 +315,7 @@ Tema rosa e azul da pag
 }
 
 /* 
-   RESPONSIVIDADE
+   Responsivo 
 */
 @media (max-width: 768px) {
   .hero-content {
