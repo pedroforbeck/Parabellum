@@ -1,9 +1,8 @@
-/* ahn... bagaça gigante aqui véi qq eu fiz kkk 
-   SOFIA'S WORLD — Player 2 Page
-   Blue/pink theme with comic-panel layout
+
+*/Page player 2- SOFIA
+Tema rosa e azul da pag
 */
 
-/* ahn... o hero da pag q eu copiei acho rs */
 .world-hero {
   min-height: 100vh;
   display: flex;
@@ -14,7 +13,7 @@
   padding: 6rem 2rem;
 }
 
-/* uns pontinho azul se pa fica daora d bg */
+/* pontilhado azul  */
 .world-hero::before {
   content: '';
   position: absolute;
@@ -25,7 +24,7 @@
   pointer-events: none;
 }
 
-/* aq umas linha torta p da um tchan tlgd */
+/*Linhas diagonais  "/" */
 .world-hero::after {
   content: '';
   position: absolute;
@@ -290,7 +289,7 @@
   margin-top: 1.5rem;
 }
 
-/* bagulho de fala rosa pra da aquele charme slc */
+/*Texto colorido */
 .speech-bubble {
   border-color: var(--blue);
 }
@@ -299,7 +298,7 @@
   border-top-color: var(--blue);
 }
 
-/* chama pro showcase tlgd */
+/*  showcase */
 .showcase-cta {
   text-align: center;
   padding: 4rem 2rem 6rem;
@@ -315,8 +314,8 @@
   margin-bottom: 1.5rem;
 }
 
-/* ufa... cabou isso aqui kkk 
-   RESPONSIVE
+/* 
+   RESPONSIVIDADE
 */
 @media (max-width: 768px) {
   .hero-content {
